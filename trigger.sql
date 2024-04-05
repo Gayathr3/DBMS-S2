@@ -2,10 +2,6 @@ SQL> create or replace trigger stud_trig after insert on studs_file
 2 for each row
 3 declare
 4 tot number:=0;
-
-ADVANCED DBMS LAB – 20MCA134
-
-SJCET Palai 42 Department of MCA
 5 begin
 6 tot:=:new.m1+:new.m2;
 7 insert into stud_mark values(:new.sid,tot);
